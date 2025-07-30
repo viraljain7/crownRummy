@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Crown Rummy</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="register-page-body">
+    <style>
+        /*
+    ADD THIS CSS to the end of your ./assets/css/style.css file.
+*/
+/*-----------------------------------*/
+/* #REGISTER PAGE
+/*-----------------------------------*/
+
+.register-page-body {
+    background: var(--raisin-black-3);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.register-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: var(--raisin-black-4);
+    border-radius: var(--radius-8);
+    overflow: hidden;
+    box-shadow: var(--shadow-2);
+    border: 1px solid var(--white_10);
+}
+
+@media (min-width: 992px) {
+    .register-card {
+        grid-template-columns: 1fr 1.1fr;
+    }
+}
+
+.register-promo {
+    position: relative;
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    display: none; /* Hidden on mobile */
+}
+
+@media (min-width: 992px) {
+    .register-promo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.promo-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.register-promo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--eerie-black-1), hsla(277, 25%, 10%, 0.7));
+    z-index: 1;
+}
+
+.register-promo .logo {
+    margin-bottom: 40px;
+    font-size: 2.8rem;
+}
+
+.promo-title {
+    color: var(--white);
+    margin-bottom: 15px;
+    font-size: var(--fs-3);
+    line-height: 1.2;
+}
+
+.promo-text {
+    color: var(--roman-silver);
+    margin-bottom: 40px;
+}
+
+.promo-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--light-gray-1);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-500);
+}
+
+.promo-features li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.promo-features ion-icon {
+    color: var(--marigold);
+    font-size: 2.2rem;
+    --ionicon-stroke-width: 35px;
+}
+
+.register-form-wrapper {
+    padding: 40px 30px;
+}
+
+@media (min-width: 576px) {
+    .register-form-wrapper {
+        padding: 50px;
+    }
+}
+
+.register-form-wrapper .form-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.register-form-wrapper .form-subtitle {
+    text-align: center;
+    color: var(--roman-silver);
+    margin-bottom: 40px;
+}
+
+.register-form .input-wrapper {
+    margin-bottom: 20px;
+}
+
+.register-form .input-wrapper::before {
+    --bg: var(--raisin-black-2);
+    --skewX: -20deg;
+}
+
+.register-form .form-input {
+    color: var(--white);
+    font-size: var(--fs-8);
+    padding: 15px 20px;
+    outline: none;
+}
+
+.register-form .form-input::placeholder {
+    color: var(--roman-silver);
+}
+
+.otp-btn {
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: center;
+    --bg: var(--raisin-black-2);
+    color: var(--marigold);
+}
+
+.otp-btn:is(:hover, :focus) {
+    --bg: var(--marigold);
+    color: var(--eerie-black-1);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--roman-silver);
+    font-size: var(--fs-9);
+    margin: 30px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--white_15);
+}
+
+.divider:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .5em;
+}
+
+.btn-social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    font-size: var(--fs-8);
+    font-weight: var(--fw-600);
+    color: var(--raisin-black-1);
+    background: var(--white);
+    border-radius: var(--radius-4);
+    margin-bottom: 30px;
+}
+
+.terms-agreement {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.terms-agreement input[type="checkbox"] {
+    margin-top: 4px;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--marigold);
+}
+
+.terms-agreement label {
+    font-size: var(--fs-9);
+    color: var(--roman-silver);
+    line-height: 1.6;
+}
+
+.terms-agreement label a {
+    display: inline;
+    color: var(--marigold);
+    text-decoration: underline;
+}
+
+.register-form .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 30px;
+    font-size: var(--fs-8);
+    color: var(--roman-silver);
+}
+
+.login-link a {
+    display: inline;
+    color: var(--marigold);
+    font-weight: var(--fw-600);
+}
+    </style>
+
+    <div class="register-container">
+        <div class="register-card">
+
+            <div class="register-promo" style="background-image: url('./assets/img/download.jpg')">
+                <div class="promo-overlay">
+                    <a href="./index.html" class="logo">Crown Rummy</a>
+                    <h1 class="h1 promo-title">Join Millions of Players</h1>
+                    <p class="promo-text">Experience India's most thrilling and secure Rummy platform.</p>
+                    <ul class="promo-features">
+                        <li><ion-icon name="flash-outline"></ion-icon> Instant Withdrawals</li>
+                        <li><ion-icon name="shield-checkmark-outline"></ion-icon> 100% Secure & Legal</li>
+                        <li><ion-icon name="trophy-outline"></ion-icon> Daily Tournaments</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="register-form-wrapper">
+                <h2 class="h2 form-title">Create Account</h2>
+                <p class="form-subtitle">Get your ₹5000 welcome bonus!</p>
+                
+                <form action="#" class="register-form">
+                    <div class="input-wrapper skewBg">
+                        <input type="tel" name="mobile_number" required placeholder="Mobile Number" class="form-input">
+                    </div>
+                    
+
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+
+                    <button type="button" class="btn-social">
+                        <img src="https://imgs.search.brave.com/PPeb0qmczu99ThJzEPX_Q8ZxNRmOaV-23uyQwFXQKCY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/ZHJpYmJibGUuY29t/L3VzZXJ1cGxvYWQv/ODA0MjM4Mi9maWxl/L3N0aWxsLWQ3NDgw/YmMxZDBjYzcyZTQx/OGQyMGE0MjI4Yzgz/MmRhLnBuZz9mb3Jt/YXQ9d2VicCZyZXNp/emU9NDAweDMwMCZ2/ZXJ0aWNhbD1jZW50/ZXI" width="80" height="80" alt="Google logo">
+                        <span>Sign Up with Google</span>
+                    </button>
+
+                    <div class="terms-agreement">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            I am 18+ and I accept the <a href="#">Terms & Conditions</a> and <a href="./privacy.html">Privacy Policy</a>.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn skewBg">
+                        <span class="span">Register Now</span>
+                    </button>
+
+                    <p class="login-link">
+                        Already have an account? <a href="#">Log In</a>
+                    </p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
