@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Play Rummy - Crown Rummy</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play Rummy - Crown Rummy</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/how-to-play.css">
 
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/how-to-play.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body id="top">
-  <!-- Header -->
+
   <header class="header">
 
     <div class="header-top">
@@ -98,137 +94,191 @@
     </div>
 
   </header>
+<br>
 
+<br>
+<br>
 
-  <main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+<br>
+<br>
+    <main>
+        <article>
+            <section class="section rules-hero" style="background-image: url('./assets/img/background.jpg')">
+                <div class="container">
+                    <div class="rules-hero-content">
+                        <h1 class="h1 rules-hero-title">Master the Game of Rummy</h1>
+                        <p class="rules-hero-text">From fundamental rules to advanced strategies, this guide provides everything you need to become a formidable Rummy player.</p>
+                    </div>
+                </div>
+            </section>
 
-    <article class="article-page">
-      <div class="container">
-        <div class="article-content">
+            <div class="rules-section" id="how-to-play">
+                <div class="container">
+                    <div class="tabs-container">
+                        <div class="tabs-nav">
+                            <button class="tab-link active" data-tab-target="#basics">The Basics</button>
+                            <button class="tab-link" data-tab-target="#gameplay">Gameplay</button>
+                            <button class="tab-link" data-tab-target="#scoring">Scoring</button>
+                            <button class="tab-link" data-tab-target="#variants">Variants</button>
+                            <button class="tab-link" data-tab-target="#glossary">Glossary</button>
+                        </div>
 
-          <div class="article-header">
-            <h1 class="h1 article-title">How to Play Indian Rummy</h1>
-            <p class="article-subtitle">Your complete guide to mastering the rules, objectives, and strategies of the nation's most popular card game.</p>
-          </div>
+                        <div class="tabs-content">
 
-          <section class="article-section">
-            <h2 class="h2 article-heading">The Objective of the Game</h2>
-            <p>In 13-card Indian Rummy, the primary goal is to be the first player to arrange all 13 of your cards into valid groupings, called **melds**. A winning hand must contain at least **two sequences**, one of which must be a **pure sequence** (made without a Joker). The remaining cards must be arranged into either sequences or sets.</p>
-          </section>
+                            <div class="tab-pane active" id="basics">
+                                <h2 class="h2 tab-title">The Objective & Core Concepts</h2>
+                                <p class="tab-description">The goal is to arrange your 13 cards into valid sets and sequences. A winning hand must have at least two sequences, one of which must be a pure sequence.</p>
+                                
+                                <div class="concept-wrapper">
+                                    <h3 class="h3 concept-title">Forming Sequences</h3>
+                                    <p class="example-label valid"><strong>Pure Sequence:</strong> 3+ consecutive cards of the same suit (no Joker).</p>
+                                    <div class="card-hand-example">
+                                        <div class="playing-card suit-diamond"><span class="rank">J</span><span class="suit">&diams;</span></div>
+                                        <div class="playing-card suit-diamond"><span class="rank">Q</span><span class="suit">&diams;</span></div>
+                                        <div class="playing-card suit-diamond"><span class="rank">K</span><span class="suit">&diams;</span></div>
+                                    </div>
+                                    <p class="example-label valid"><strong>Impure Sequence:</strong> A sequence using a Joker as a substitute.</p>
+                                    <div class="card-hand-example">
+                                        <div class="playing-card suit-club"><span class="rank">6</span><span class="suit">&clubs;</span></div>
+                                        <div class="playing-card is-joker"><span class="rank">JOKER</span></div>
+                                        <div class="playing-card suit-club"><span class="rank">8</span><span class="suit">&clubs;</span></div>
+                                    </div>
+                                </div>
 
-          <section class="article-section">
-            <h2 class="h2 article-heading">Key Concepts: Sequences and Sets</h2>
-            
-            <h3 class="h3 article-subheading">Forming Sequences (Your "Lives")</h3>
-            <p>A sequence consists of three or more consecutive cards of the same suit. They are the most critical part of the game.</p>
-            <div class="concept-grid">
-              <div class="concept-card">
-                <h4>Pure Sequence (First Life)</h4>
-                <p>A sequence made **without** a Joker. You need at least one to win. This is your "first life."</p>
-                <div class="card-example">5<span class="heart-suit">♥</span> 6<span class="heart-suit">♥</span> 7<span class="heart-suit">♥</span></div>
-              </div>
-              <div class="concept-card">
-                <h4>Impure Sequence (Second Life)</h4>
-                <p>A sequence where one or more cards are replaced by a Joker. You need a second sequence (pure or impure) to win.</p>
-                <div class="card-example">9<span class="spade-suit">♠</span> <span class="joker-text">Joker</span> J<span class="spade-suit">♠</span></div>
-              </div>
+                                <div class="concept-wrapper">
+                                    <h3 class="h3 concept-title">Forming Sets</h3>
+                                    <p class="example-label valid"><strong>Valid Set:</strong> 3 or 4 cards of the same rank, but different suits.</p>
+                                    <div class="card-hand-example">
+                                        <div class="playing-card suit-heart"><span class="rank">A</span><span class="suit">&hearts;</span></div>
+                                        <div class="playing-card suit-spade"><span class="rank">A</span><span class="suit">&spades;</span></div>
+                                        <div class="playing-card suit-club"><span class="rank">A</span><span class="suit">&clubs;</span></div>
+                                    </div>
+                                    <p class="example-label invalid"><strong>Invalid Set:</strong> Cannot contain duplicate suits.</p>
+                                    <div class="card-hand-example">
+                                        <div class="playing-card suit-heart"><span class="rank">K</span><span class="suit">&hearts;</span></div>
+                                        <div class="playing-card suit-heart"><span class="rank">K</span><span class="suit">&hearts;</span></div>
+                                        <div class="playing-card is-joker"><span class="rank">JOKER</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="gameplay">
+                                <h2 class="h2 tab-title">The Gameplay Loop</h2>
+                                <br>
+                                <ol class="step-list-v2">
+                                    <li>
+                                        <div class="step-icon"><ion-icon name="shuffle-outline"></ion-icon></div>
+                                        <div class="step-content">
+                                            <h3 class="h3">Deal & Toss</h3>
+                                            <p>13 cards are dealt to each player. A random card determines the Wild Joker for the round, and another toss decides the first player.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="step-icon"><ion-icon name="arrow-down-circle-outline"></ion-icon></div>
+                                        <div class="step-content">
+                                            <h3 class="h3">Draw</h3>
+                                            <p>On your turn, begin by drawing one card from either the face-down Closed Deck or the face-up Open Deck (discard pile).</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="step-icon"><ion-icon name="arrow-up-circle-outline"></ion-icon></div>
+                                        <div class="step-content">
+                                            <h3 class="h3">Discard</h3>
+                                            <p>After drawing, you must end your turn by discarding one of your 14 cards to the Open Deck.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="step-icon"><ion-icon name="trophy-outline"></ion-icon></div>
+                                        <div class="step-content">
+                                            <h3 class="h3">Declare</h3>
+                                            <p>Once your hand is arranged into valid melds, discard your final card to declare your win. An invalid declaration results in a penalty.</p>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+
+                            <div class="tab-pane" id="scoring">
+                                <h2 class="h2 tab-title">Point Calculation</h2>
+                                <br>
+                                <div class="scoring-grid">
+                                    <div class="scoring-card">
+                                        <h3 class="h3">Card Values</h3>
+                                        <ul>
+                                            <li><span class="span">A, K, Q, J</span> : 10 Points</li>
+                                            <li><span class="span">10, 9, 8...2</span> : Face Value</li>
+                                            <li><span class="span">Joker</span> : 0 Points</li>
+                                        </ul>
+                                    </div>
+                                    <div class="scoring-card">
+                                        <h3 class="h3">Winner's Score</h3>
+                                        <p>The player who makes a valid declaration receives <strong>zero points</strong>.</p>
+                                    </div>
+                                    <div class="scoring-card">
+                                        <h3 class="h3">Loser's Score</h3>
+                                        <p>Losing players accumulate points equal to the sum of their cards that are not part of a valid meld.</p>
+                                    </div>
+                                    <div class="scoring-card">
+                                        <h3 class="h3">Wrong Declaration</h3>
+                                        <p>A player making an invalid declaration is penalized with <strong>80 points</strong>.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="variants">
+                                <h2 class="h2 tab-title">Game Variants</h2>
+                                <p class="tab-description">Master the core game, then test your skills in our different Rummy formats.</p>
+                                <div class="game-variants-grid">
+                                    <div class="variant-card">
+                                        <div class="card-icon"><ion-icon name="flash-outline"></ion-icon></div>
+                                        <h3 class="h3 card-title">Points Rummy</h3>
+                                        <p class="tab-description text-white">The fastest format, ideal for quick games. Winnings are based on the points accumulated by opponents in a single deal.</p>
+                                    </div>
+                                    <div class="variant-card">
+                                        <div class="card-icon"><ion-icon name="trophy-outline"></ion-icon></div>
+                                        <h3 class="h3 card-title">Pool Rummy</h3>
+                                        <p class="tab-description">A game of elimination. Players are knocked out upon reaching a point threshold (101/201). Last player standing wins.</p>
+                                    </div>
+                                    <div class="variant-card">
+                                        <div class="card-icon"><ion-icon name="layers-outline"></ion-icon></div>
+                                        <h3 class="h3 card-title">Deals Rummy</h3>
+                                        <p class="tab-description">A strategic format played for a fixed number of deals. The player with the most chips at the end is the winner.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="glossary">
+                                <h2 class="h2 tab-title">Glossary of Terms</h2>
+                                <dl class="glossary-list-v2">
+                                    <dt>Meld</dt>
+                                    <dd>A valid group of cards, either a sequence or a set.</dd>
+                                    <dt>Pure Sequence</dt>
+                                    <dd>A sequence formed without a Joker. A minimum of one is mandatory to win.</dd>
+                                    <dt>Impure Sequence</dt>
+                                    <dd>A sequence where one or more cards are replaced by a Joker.</dd>
+                                    <dt>Set</dt>
+                                    <dd>A group of 3 or 4 cards of the same rank but different suits.</dd>
+                                    <dt>Wild Joker</dt>
+                                    <dd>A card randomly chosen at the start of a round. All cards of that rank also become Jokers.</dd>
+                                    <dt>Drop</dt>
+                                    <dd>To exit a game round early for a fixed penalty, if you have a weak hand.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </article>
+    </main>
 
-            <h3 class="h3 article-subheading">Forming Sets</h3>
-            <p>A set consists of three or four cards of the same rank but from **different suits**. A Joker can be used to complete a set.</p>
-            <ul class="example-list">
-              <li class="valid-example"><strong>Valid Set:</strong> 8<span class="heart-suit">♥</span> 8<span class="spade-suit">♠</span> 8<span class="club-suit">♣</span></li>
-              <li class="valid-example"><strong>Valid Set with Joker:</strong> A<span class="spade-suit">♠</span> A<span class="club-suit">♣</span> <span class="joker-text">Joker</span></li>
-              <li class="invalid-example"><strong>Invalid Set:</strong> 7<span class="heart-suit">♥</span> 7<span class="heart-suit">♥</span> 8<span class="spade-suit">♠</span> (Cannot have two cards of the same suit).</li>
-            </ul>
-          </section>
+  <!-- FAQ Accordion Section -->
+<section class="section faq-section" id="faq" style="background-color: #f8f9fa; padding: 3rem 0; ">
 
-          <section class="article-section">
-            <h2 class="h2 article-heading">The Gameplay Flow</h2>
-            <ol class="step-list">
-              <li><strong>The Toss & Deal:</strong> A random card is drawn to decide the first player. Each player is then dealt 13 cards.</li>
-              <li><strong>The Decks:</strong> The remaining cards form the face-down **Closed Deck**. The top card is placed face-up to start the **Open Deck** (or discard pile).</li>
-              <li><strong>Your Turn:</strong> On your turn, you must perform two actions:
-                <ul>
-                  <li><strong>Draw:</strong> Pick one card from either the Closed Deck or the Open Deck.</li>
-                  <li><strong>Discard:</strong> After drawing, discard one of your unwanted cards to the Open Deck.</li>
-                </ul>
-              </li>
-              <li><strong>The Win (Declaration):</strong> When your 13 cards are fully arranged into valid melds, you discard your 14th card to the "Finish Slot" to declare your hand and win the round.</li>
-            </ol>
-          </section>
-
-          <section class="article-section">
-            <h2 class="h2 article-heading">Glossary of Rummy Terms</h2>
-            <dl class="glossary-list">
-              <dt>Meld</dt>
-              <dd>A valid group of cards, which can be either a sequence or a set.</dd>
-              <dt>Joker</dt>
-              <dd>A card that can substitute for any other card. There are two types: the Printed Joker and the Wild Joker (a randomly chosen card rank).</dd>
-              <dt>Drop</dt>
-              <dd>The option to leave the game round early if you have a poor hand, taking a smaller point penalty.</dd>
-              <dt>Show / Declare</dt>
-              <dd>The act of presenting your hand for validation at the end of a round when you believe you have won.</dd>
-              <dt>Invalid Declaration</dt>
-              <dd>A declaration that fails to meet the win conditions (e.g., no pure sequence). This results in a maximum point penalty.</dd>
-            </dl>
-          </section>
-          
-          <section class="article-section">
-            <h2 class="h2 article-heading">Frequently Asked Questions</h2>
-            <div class="faq-accordion">
-              <div class="faq-item">
-                <button class="faq-question">
-                  <span>How many cards are dealt in Rummy?</span>
-                  <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
-                </button>
-                <div class="faq-answer">
-                  <p>In standard 13-card Indian Rummy, each player is dealt 13 cards.</p>
-                </div>
-              </div>
-              <div class="faq-item">
-                <button class="faq-question">
-                  <span>Can I use two Jokers in one set?</span>
-                  <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
-                </button>
-                <div class="faq-answer">
-                  <p>Yes, a set can be formed using one or more Jokers. For example, 5♣️ 5♦️ Joker Joker is a valid set of four.</p>
-                </div>
-              </div>
-              <div class="faq-item">
-                <button class="faq-question">
-                  <span>What is the point value of each card?</span>
-                  <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
-                </button>
-                <div class="faq-answer">
-                  <p>Aces, Kings, Queens, and Jacks are worth 10 points each. Numbered cards are worth their face value. Jokers (both printed and wild) are worth 0 points.</p>
-                </div>
-              </div>
-               <div class="faq-item">
-                <button class="faq-question">
-                  <span>What happens if I make an invalid declaration?</span>
-                  <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
-                </button>
-                <div class="faq-answer">
-                  <p>If you declare incorrectly, you lose the game and are penalized with the maximum points for that round (usually 80 points).</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-        </div>
-      </div>
-    </article>
-  </main>
   
+</section>
+
+
   <!-- Newsletter Section -->
-  <section class="newsletter" aria-label="newsletter">
+  <section class="newsletter"  aria-label="newsletter">
     <div class="container">
 
       <div class="newsletter-card ">
@@ -260,7 +310,7 @@
     </div>
   </section>
 
-  <!-- !-- Footer --> -->
+  <!-- !-- Footer -->
   <footer class="footer">
 
     <div class="footer-top">

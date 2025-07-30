@@ -1,0 +1,141 @@
+/*
+    REPLACE the previous #CONTACT v2 CSS in your style.css file with this updated block.
+    The primary change is making all form fields full-width.
+*/
+/*-----------------------------------*/
+/* #CONTACT v2 (Full-Width Fields)
+/*-----------------------------------*/
+
+.contact-v2 {
+    padding-block: var(--section-padding);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .contact-v2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: hsla(280, 11%, 11%, 0.85);
+    backdrop-filter: blur(5px);
+  }
+  
+  .contact-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: hsla(0, 0%, 100%, 0.05);
+    border: 1px solid var(--white_10);
+    border-radius: var(--radius-8);
+    overflow: hidden;
+  }
+  
+  @media (min-width: 992px) {
+    .contact-card {
+      grid-template-columns: 1fr 1.2fr;
+    }
+  }
+  
+  .contact-card-content {
+    padding: 40px;
+    border-bottom: 1px solid var(--white_10);
+  }
+  
+  @media (min-width: 992px) {
+    .contact-card-content {
+      padding: 60px;
+      border-bottom: none;
+      border-right: 1px solid var(--white_10);
+    }
+  }
+  
+  .contact-card-content .section-title,
+  .contact-card-content .section-text {
+    text-align: left;
+    margin-inline: 0;
+  }
+  
+  .contact-card-content .section-title::after {
+    display: none;
+  }
+  
+  .contact-card-content .section-text {
+    margin-block: 20px 40px;
+    font-size: var(--fs-8);
+    color: var(--roman-silver);
+  }
+  
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--light-gray-1);
+  }
+  
+  .contact-item ion-icon {
+    color: var(--marigold);
+    font-size: 2.2rem;
+    --ionicon-stroke-width: 35px;
+  }
+  
+  .contact-link {
+    transition: var(--transition);
+  }
+  
+  .contact-link:is(:hover, :focus) {
+    color: var(--marigold);
+  }
+  
+  .contact-card-form {
+    padding: 40px;
+  }
+  
+  @media (min-width: 992px) {
+    .contact-card-form {
+      padding: 60px;
+    }
+  }
+  
+  .contact-form .form-field-wrapper {
+    margin-bottom: 25px;
+  }
+  
+  .contact-form .input-field {
+    width: 100%; /* Ensures the input/textarea takes the full width of its wrapper */
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--white_15);
+    padding: 15px 0;
+    font-size: var(--fs-8);
+    color: var(--white);
+    outline: none;
+    transition: border-color var(--transition);
+  }
+  
+  .contact-form .input-field::placeholder {
+    color: var(--roman-silver);
+  }
+  
+  .contact-form .input-field:focus {
+    border-color: var(--marigold);
+  }
+  
+  .contact-form textarea.input-field {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .contact-form .btn {
+    width: 100%;
+    justify-content: center;
+  }

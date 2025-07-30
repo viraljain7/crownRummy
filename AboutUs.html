@@ -1,20 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Crown Rummy</title>
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/aboutus.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Crown Rummy</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/aboutus.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
+<style>
+  /*
+    ADD THIS CSS to the end of your ./assets/css/style.css file.
+    This styles the new FAQ section to match your dark theme.
+*/
+/*-----------------------------------*/
+/* #FAQ
+/*-----------------------------------*/
+
+.faq {
+    background-color: var(--raisin-black-3);
+    padding-block: var(--section-padding);
+}
+
+.faq .section-title-wrapper {
+    margin-bottom: 60px;
+}
+
+.faq-accordion {
+    max-width: 850px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background: var(--raisin-black-4);
+    border: 1px solid var(--white_10);
+    border-radius: var(--radius-8);
+    overflow: hidden;
+    transition: background-color var(--transition);
+}
+
+.faq-item:hover {
+    background-color: var(--raisin-black-2);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 25px;
+    font-family: var(--ff-oxanium);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-700);
+    color: var(--white);
+    text-align: left;
+    transition: color var(--transition);
+}
+
+.faq-question .span {
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-question .span {
+    color: var(--marigold);
+}
+
+.faq-icon {
+    font-size: 2rem;
+    color: var(--marigold);
+    transition: transform 0.4s var(--cubic-out);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--cubic-out), padding 0.4s var(--cubic-out);
+}
+
+.faq-answer p,
+.faq-answer li {
+    color: var(--roman-silver);
+    font-size: var(--fs-8);
+    line-height: 1.8;
+}
+
+.faq-answer ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-answer ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.faq-answer ul li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--marigold);
+    font-size: 0.8em;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Set a large max-height to allow content to expand */
+    padding: 0 25px 25px;
+}
+</style>
 <body id="top">
-  <!-- Header -->
+
+      <!-- Header -->
   <header class="header">
 
     <div class="header-top">
@@ -95,160 +208,167 @@
 
   </header>
 
-  <main>
-    <article class="about-page">
+<br>
+<br>
+<br>
+<br>
+
+    <main>
+        <article>
+            <section class="section about-hero-v2" style="background-image: url('./assets/img/background.jpg')">
+                <div class="container">
+                    <div class="about-hero-content">
+                        <p class="section-subtitle">Our Mission</p>
+                        <h1 class="h1 about-hero-title">Engineering the Future of Skill-Based Gaming</h1>
+                        <p class="about-hero-text">
+                            We are committed to building the most secure, rewarding, and technologically advanced online Rummy platform in India, founded on a deep respect for the game and its players.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section about-story" id="about">
+                <div class="container">
+                    <div class="about-story-content">
+                        <p class="section-subtitle">The Genesis of Crown Rummy</p>
+                        
+                        <h2 class="h2 section-title">Forged in <span class="span">Passion</span></h2>
+                        <br>
+                        <br>
+                        <br>
+                        
+
+                        <p class="section-text">
+                            Crown Rummy was conceived in Vadodara, Gujarat, by a dedicated team of technologists and lifelong Rummy enthusiasts. We observed a digital landscape ripe for innovation and set out to create a platform that honors the rich tradition of Rummy while delivering a flawless, modern user experience. Our foundation is built on a simple premise: to create the platform we, as players, would want to play on.
+                        </p>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section class="section about-timeline">
+                <div class="container">
+                    <p class="section-subtitle text-center">Our Journey</p>
+                    <h2 class="h2 section-title text-center">Milestones & <span class="span">Vision</span></h2>
+                    <div class="timeline-wrapper">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="h3 timeline-title">2022: The Blueprint</h3>
+                                <p class="timeline-text">The concept for Crown Rummy is born. A core team assembles in Vadodara to architect a platform focused on security, scalability, and fair play.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="h3 timeline-title">2023: Platform Launch</h3>
+                                <p class="timeline-text">Crown Rummy officially launches its web and mobile applications, introducing a seamless UI and robust game engine to the first wave of players.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="h3 timeline-title">2024: One Million Strong</h3>
+                                <p class="timeline-text">Our community grows exponentially, reaching a milestone of one million registered users, validating our player-first approach.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="h3 timeline-title">2025: Tournament Innovation</h3>
+                                <p class="timeline-text">Introduction of high-stakes, multi-level tournaments and a tiered loyalty program, redefining the competitive landscape of online Rummy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+          
+            
+        </article>
+    </main>
+  
+    <section class="section faq" id="faq" aria-label="frequently asked questions">
       <div class="container">
-        
-        <!-- Hero Section -->
-        <section class="about-hero">
-          <div class="hero-content">
-            <h1 class="h1 hero-title">India's Most Trusted Rummy Platform</h1>
-            <p class="hero-subtitle">Where skill meets entertainment in a secure, responsible gaming environment</p>
-          </div>
-          <div class="hero-image">
-            <img src="./assets/img/about-hero.jpg" alt="Crown Rummy team celebrating">
-          </div>
-        </section>
+          <div class="section-title-wrapper text-center">
+              <p class="section-subtitle">Have Questions?</p>
+              <h2 class="h2 section-title">
+                  Frequently Asked <span class="span">Questions</span>
+              </h2>
+              <br>
+              <br>
 
-        <!-- Our Story -->
-        <section class="about-section">
-          <div class="section-header">
-            <h2 class="h2 section-title">Our Story</h2>
-            <div class="section-divider"></div>
+              <p class="section-text">
+                  Find quick answers to common questions about gameplay, accounts, and security. If you don't find your answer here, feel free to contact our support team.
+              </p>
           </div>
-          <div class="section-content">
-            <p>Founded in 2015, Crown Rummy has grown from a passionate startup to India's premier online rummy destination. What began as a vision to revolutionize digital card gaming has evolved into a platform serving millions of players across India.</p>
-            <p>Our journey has been marked by continuous innovation in game technology, unwavering commitment to fair play, and dedication to responsible gaming practices. Today, we're proud to be recognized as an industry leader, setting standards for security, customer service, and player experience.</p>
-          </div>
-        </section>
-
-        <!-- Mission & Values -->
-        <section class="about-section values-section">
-          <div class="section-header">
-            <h2 class="h2 section-title">Our Mission & Values</h2>
-            <div class="section-divider"></div>
-          </div>
-          <div class="values-grid">
-            <div class="value-card">
-              <div class="value-icon"><ion-icon name="shield-checkmark-outline"></ion-icon></div>
-              <h3 class="h3 value-title">Integrity First</h3>
-              <p>We maintain the highest standards of fairness and transparency in all our games and business practices.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon"><ion-icon name="happy-outline"></ion-icon></div>
-              <h3 class="h3 value-title">Player-Centric</h3>
-              <p>Every decision we make prioritizes creating the best possible experience for our players.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon"><ion-icon name="sparkles-outline"></ion-icon></div>
-              <h3 class="h3 value-title">Innovation</h3>
-              <p>We continuously evolve our platform to deliver cutting-edge gaming experiences.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon"><ion-icon name="heart-outline"></ion-icon></div>
-              <h3 class="h3 value-title">Responsible Gaming</h3>
-              <p>We promote healthy gaming habits through robust player protection measures.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Leadership -->
-        <section class="about-section team-section">
-          <div class="section-header">
-            <h2 class="h2 section-title">Leadership Team</h2>
-            <div class="section-divider"></div>
-          </div>
-          <div class="team-grid">
-            <div class="team-card">
-              <div class="team-image">
-                <img src="./assets/img/team-ceo.jpg" alt="Rajiv Mehta, CEO">
+  
+          <div class="faq-accordion">
+              <div class="faq-item">
+                  <button class="faq-question">
+                      <span class="span">Is online rummy legal in India?</span>
+                      <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+                  </button>
+                  <div class="faq-answer">
+                      <p>Yes. The Supreme Court of India has declared Rummy a "game of skill," which exempts it from gambling laws. It is therefore legal to play for real money in most Indian states. Please check the laws of your particular state, as some exceptions apply.</p>
+                  </div>
               </div>
-              <div class="team-info">
-                <h3 class="h3 team-name">Rajiv Mehta</h3>
-                <p class="team-position">Founder & CEO</p>
-                <p class="team-bio">Former gaming executive with 15+ years experience in digital entertainment platforms.</p>
+              <div class="faq-item">
+                  <button class="faq-question">
+                      <span class="span">How do I withdraw my winnings?</span>
+                      <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+                  </button>
+                  <div class="faq-answer">
+                      <p>Withdrawing is simple. First, ensure your KYC is complete. Then, navigate to the 'Cashier' or 'Wallet' section, select 'Withdraw,' enter the amount, and choose your preferred method. Most withdrawals on our platform are processed within minutes.</p>
+                  </div>
               </div>
-            </div>
-            <div class="team-card">
-              <div class="team-image">
-                <img src="./assets/img/team-cto.jpg" alt="Priya Sharma, CTO">
+              <div class="faq-item">
+                  <button class="faq-question">
+                      <span class="span">What is the minimum age to play?</span>
+                      <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+                  </button>
+                  <div class="faq-answer">
+                      <p>You must be 18 years or older to create an account and play on Crown Rummy. We enforce this policy strictly through a mandatory KYC verification process to ensure a responsible gaming environment.</p>
+                  </div>
               </div>
-              <div class="team-info">
-                <h3 class="h3 team-name">Priya Sharma</h3>
-                <p class="team-position">Chief Technology Officer</p>
-                <p class="team-bio">Technology visionary specializing in secure, scalable gaming architectures.</p>
+              <div class="faq-item">
+                  <button class="faq-question">
+                      <span class="span">How is Crown Rummy different?</span>
+                      <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+                  </button>
+                  <div class="faq-answer">
+                      <p>We pride ourselves on three pillars: ironclad security with the latest encryption, the fastest withdrawal processing in the industry, and a world-class, 24/7 customer support team. Our platform is built by players, for players.</p>
+                  </div>
               </div>
-            </div>
-            <div class="team-card">
-              <div class="team-image">
-                <img src="./assets/img/team-cmo.jpg" alt="Arjun Patel, CMO">
+              <div class="faq-item">
+                  <button class="faq-question">
+                      <span class="span">What are the main Rummy variants offered?</span>
+                      <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+                  </button>
+                  <div class="faq-answer">
+                      <p>We offer the three most popular formats of Indian Rummy:</p>
+                      <ul>
+                          <li><strong>Points Rummy:</strong> The fastest version, played for a single deal.</li>
+                          <li><strong>Pool Rummy:</strong> An elimination format where the last player standing wins.</li>
+                          <li><strong>Deals Rummy:</strong> A strategic format played for a pre-decided number of deals.</li>
+                      </ul>
+                  </div>
               </div>
-              <div class="team-info">
-                <h3 class="h3 team-name">Arjun Patel</h3>
-                <p class="team-position">Chief Marketing Officer</p>
-                <p class="team-bio">Brand strategist with expertise in digital engagement and community building.</p>
+              <div class="faq-item">
+                  <button class="faq-question">
+                      <span class="span">How do I complete my KYC verification?</span>
+                      <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+                  </button>
+                  <div class="faq-answer">
+                      <p>To complete your KYC, navigate to your profile and upload clear images of the required documents: your PAN card for identity verification and a document like an Aadhaar card or bank statement for address proof. Verification is typically completed within a few hours.</p>
+                  </div>
               </div>
-            </div>
           </div>
-        </section>
-
-        <!-- Achievements -->
-        <section class="about-section stats-section">
-          <div class="section-header">
-            <h2 class="h2 section-title">By The Numbers</h2>
-            <div class="section-divider"></div>
-          </div>
-          <div class="stats-grid">
-            <div class="stat-card">
-              <div class="stat-number">10M+</div>
-              <div class="stat-label">Registered Players</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">24/7</div>
-              <div class="stat-label">Customer Support</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">99.9%</div>
-              <div class="stat-label">Uptime Reliability</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">150+</div>
-              <div class="stat-label">Employees</div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Awards -->
-        <section class="about-section awards-section">
-          <div class="section-header">
-            <h2 class="h2 section-title">Recognitions & Awards</h2>
-            <div class="section-divider"></div>
-          </div>
-          <div class="awards-grid">
-            <div class="award-card">
-              <img src="./assets/img/247.jpg" style="width: 50px; height: 50px;" alt="Best Gaming Platform 2023" class="award-image">
-              <p>Best Gaming Platform 2023</p>
-            </div>
-            <div class="award-card">
-              <img src="./assets/img/247.jpg" style="width: 50px; height: 50px;" alt="Player's Choice Award" class="award-image">
-              <p>Player's Choice Award 2022</p>
-            </div>
-            <div class="award-card">
-              <img src="./assets/img/247.jpg" style="width: 50px; height: 50px;" alt="Innovation Excellence" class="award-image">
-              <p>Innovation Excellence 2021</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="about-cta">
-          <h2 class="h2 cta-title">Join India's Favorite Rummy Community</h2>
-          <a href="#" class="btn skewBg cta-button">Play Now</a>
-        </section>
-
       </div>
-    </article>
-  </main>
+  </section>
+  
+  <!-- FAQ Accordion Section -->
+  <section class="section faq-section" id="faq" style="background-color: #f8f9fa; padding: 3rem 0; ">
+
+  
+  </section>
+  
   
   <!-- Newsletter Section -->
   <section class="newsletter" aria-label="newsletter">
@@ -283,7 +403,7 @@
     </div>
   </section>
 
-  <!-- !-- Footer --> -->
+  <!-- Footer -->
   <footer class="footer">
 
     <div class="footer-top">
@@ -444,7 +564,6 @@
     </div>
 
   </footer>
-
 
   <!-- Back to Top -->
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>

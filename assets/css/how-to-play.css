@@ -1,184 +1,227 @@
+/*
+    REPLACE all previous #HOW TO PLAY and #ARTICLE PAGE CSS in your style.css file with this new block.
+*/
 /*-----------------------------------*/
-/* #ARTICLE PAGE (How to Play, etc.)
+/* #HOW TO PLAY v3 (Interactive Tabs)
 /*-----------------------------------*/
 
-.article-page {
-    background: var(--white);
-    padding: 40px 0 80px;
-  }
-  
-  .article-content {
-    max-width: 900px;
-    margin: 0 auto;
-    color: var(--sonic-silver);
-  }
-  
-  .article-header {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  .article-title {
-    color: var(--oxford-blue);
-  }
-  
-  .article-subtitle {
-    font-size: var(--fs-5);
-    color: var(--davys-grey);
-    margin-top: 10px;
-    max-width: 600px;
-    margin-inline: auto;
-  }
-  
-  .article-section {
-    margin-bottom: 50px;
-  }
-  
-  .article-heading {
-    color: var(--oxford-blue);
-    font-family: var(--ff-oxanium);
-    border-bottom: 2px solid var(--marigold);
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-  }
-  
-  .article-subheading {
-    color: var(--oxford-blue);
-    font-size: var(--fs-4);
-    font-weight: var(--fw-600);
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
-  
-  .article-content p {
-    line-height: 1.8;
-    margin-bottom: 15px;
-  }
-  
-  /* Concept Cards for Sequences */
-  .concept-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    margin-top: 20px;
-  }
-  
-  @media (min-width: 768px) {
-    .concept-grid { grid-template-columns: 1fr 1fr; }
-  }
-  
-  .concept-card {
-    background: hsl(220, 20%, 96%);
-    padding: 25px;
-    border-radius: var(--radius-8);
-    border: 1px solid hsl(220, 20%, 90%);
-  }
-  
-  .concept-card h4 {
-    color: var(--oxford-blue);
-    margin-bottom: 10px;
-    font-size: var(--fs-5);
-  }
-  
-  .card-example {
-    background: var(--white);
-    padding: 15px;
-    border-radius: var(--radius-4);
-    font-weight: var(--fw-700);
-    text-align: center;
-    font-size: var(--fs-5);
-    margin-top: 15px;
-    border: 1px dashed hsl(220, 20%, 90%);
-  }
-  
-  /* Gameplay Step List */
-  .step-list {
-    list-style: none;
-    counter-reset: step-counter;
-    padding-left: 0;
-  }
-  
-  .step-list li {
-    counter-increment: step-counter;
-    position: relative;
-    padding: 15px 15px 15px 60px;
-    margin-bottom: 20px;
-    background: hsl(220, 20%, 96%);
-    border-radius: var(--radius-8);
-  }
-  
-  .step-list li::before {
-    content: counter(step-counter);
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--marigold);
-    color: var(--oxford-blue);
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-family: var(--ff-oxanium);
-    font-weight: var(--fw-700);
-  }
-  
-  .step-list ul {
-    padding-left: 20px;
-    margin-top: 10px;
-  }
-  
-  /* Glossary List */
-  .glossary-list dt {
-    color: var(--oxford-blue);
-    font-weight: var(--fw-700);
-    font-size: var(--fs-5);
-    margin-top: 20px;
-  }
-  
-  .glossary-list dd {
-    margin-left: 0;
-    padding-bottom: 15px;
-    border-bottom: 1px solid hsl(220, 20%, 90%);
-  }
-  
-  /* FAQ Accordion */
-  .faq-accordion .faq-item {
-    border-bottom: 1px solid hsl(220, 20%, 90%);
-  }
-  
-  .faq-accordion .faq-question {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: none;
-    border: none;
-    padding: 20px 0;
-    font-size: var(--fs-5);
-    font-weight: var(--fw-600);
-    color: var(--oxford-blue);
-    cursor: pointer;
-    text-align: left;
-  }
-  
-  .faq-accordion .faq-icon {
-    font-size: 1.2em;
-    transition: transform 0.3s ease;
-  }
-  
-  .faq-accordion .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out, padding 0.3s ease;
-  }
-  
-  .faq-accordion .faq-answer p {
-    padding: 0 10px 20px;
-  }
-  
-  /* Active state for FAQ */
-  .faq-accordion .faq-item.active .faq-icon {
-    transform: rotate(180deg);
-  }
+.rules-hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.rules-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--raisin-black-3) 5%, hsla(280, 11%, 11%, 0.8));
+}
+
+.rules-hero-content {
+  position: relative;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.rules-hero-title {
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.rules-hero-text {
+  color: var(--roman-silver);
+  margin-top: 15px;
+  font-size: var(--fs-7);
+}
+
+.rules-section {
+  background: var(--raisin-black-3);
+  padding: 60px 0;
+  margin-top: -1px; /* Overlap fix */
+}
+
+.tabs-container {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.tabs-nav {
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 2px solid var(--raisin-black-4);
+  scrollbar-width: none; /* For Firefox */
+}
+.tabs-nav::-webkit-scrollbar { display: none; } /* For Chrome, Safari, and Opera */
+
+.tab-link {
+  font-family: var(--ff-oxanium);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-700);
+  color: var(--roman-silver);
+  text-transform: uppercase;
+  padding: 15px 30px;
+  white-space: nowrap;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+
+.tab-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--marigold);
+  transform: scaleX(0);
+  transition: transform 0.3s var(--cubic-out);
+}
+
+.tab-link:is(:hover, :focus) {
+  color: var(--white);
+}
+
+.tab-link.active {
+  color: var(--marigold);
+}
+
+.tab-link.active::after {
+  transform: scaleX(1);
+}
+
+.tabs-content {
+  padding: 40px 0;
+}
+
+.tab-pane {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-title {
+  margin-bottom: 10px;
+}
+.tab-description {
+  color: var(--roman-silver);
+  max-width: 80ch;
+  margin-bottom: 40px;
+}
+
+.concept-wrapper {
+  background: var(--raisin-black-4);
+  padding: 30px;
+  border-radius: var(--radius-8);
+  margin-bottom: 30px;
+}
+.concept-title {
+  color: var(--white);
+  border-bottom: 1px solid var(--white_15);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.playing-card { margin-top: 15px; }
+
+
+/* Gameplay Steps */
+.step-list-v2 {
+  list-style: none;
+  padding-left: 0;
+}
+.step-list-v2 li {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--raisin-black-4);
+}
+.step-list-v2 li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.step-icon {
+  color: var(--marigold);
+  font-size: 3.5rem;
+}
+.step-content h3 {
+  color: var(--white);
+  margin-bottom: 5px;
+}
+.step-content p {
+  color: var(--roman-silver);
+}
+
+/* Scoring */
+.scoring-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.scoring-card {
+  background: var(--raisin-black-4);
+  padding: 25px;
+  border-radius: var(--radius-8);
+}
+.scoring-card h3 {
+  color: var(--marigold);
+  margin-bottom: 15px;
+}
+.scoring-card p, .scoring-card li {
+  color: var(--light-gray-1);
+}
+.scoring-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+.scoring-card li { margin-bottom: 5px; }
+.scoring-card .span {
+  font-weight: var(--fw-700);
+  color: var(--white);
+  display: inline-block;
+  width: 100px;
+}
+
+/* Variants - Reuses from index */
+.tab-pane .game-variants-grid {
+    margin-top: 0;
+}
+
+/* Glossary */
+.glossary-list-v2 {
+  column-count: 1;
+  column-gap: 40px;
+}
+@media (min-width: 768px) {
+  .glossary-list-v2 { column-count: 2; }
+}
+.glossary-list-v2 dt {
+  color: var(--white);
+  font-weight: var(--fw-700);
+  font-size: var(--fs-7);
+  margin-top: 20px;
+}
+.glossary-list-v2 dd {
+  color: var(--roman-silver);
+  font-size: var(--fs-8);
+  margin-left: 0;
+  padding-bottom: 15px;
+}
+
+/* Playing Card UI (from previous step, included for completeness) */
+.example-label{font-weight:var(--fw-600);color:var(--white);margin-bottom:15px!important;position:relative;padding-left:25px}.example-label.valid::before{content:'✓';color:hsl(145, 63%, 42%);position:absolute;left:0;font-size:1.2em;font-weight:var(--fw-900)}.example-label.invalid::before{content:'✗';color:hsl(0, 79%, 63%);position:absolute;left:0;font-size:1.2em;font-weight:var(--fw-900)}.card-hand-example{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-start;margin-bottom:25px}.playing-card{--card-width:65px;--card-height:90px;width:var(--card-width);height:var(--card-height);background:var(--white);border-radius:var(--radius-4);border:1px solid hsl(220, 20%, 85%);box-shadow:0 2px 5px hsla(0, 0%, 0%, 0.1);display:flex;flex-direction:column;justify-content:space-between;padding:5px;font-family:var(--ff-oxanium);font-weight:var(--fw-800);font-size:1.5em;position:relative}.playing-card .rank{position:absolute;top:5px;left:8px}.playing-card .suit{position:absolute;bottom:5px;right:8px;font-size:1.2em}.playing-card.suit-heart,.playing-card.suit-diamond{color:hsl(0, 79%, 63%)}.playing-card.suit-spade,.playing-card.suit-club{color:var(--xiketic)}.playing-card.is-joker{background-image:linear-gradient(45deg, var(--marigold), hsl(35, 100%, 60%));color:var(--white);align-items:center;justify-content:center;font-size:.9em;text-shadow:1px 1px 2px hsla(0, 0%, 0%, 0.2)}.playing-card.is-joker .rank{position:static}
