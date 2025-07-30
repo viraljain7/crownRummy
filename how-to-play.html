@@ -15,6 +15,7 @@
 </head>
 <body id="top">
 
+  <!-- Header -->
   <header class="header">
 
     <div class="header-top">
@@ -75,11 +76,13 @@
             <li class="navbar-item">
               <a href="./Contact.html" class="navbar-link skewBg" data-nav-link>Contact</a>
             </li>
-
+            <li class="navbar-item">
+              <a href="./Contact.html" class="navbar-link skewBg" data-nav-link>Register</a>
+            </li>
           </ul>
+          <!-- <button class="btn skewBg"  >Register</button> -->
         </nav>
 
-        <button class="btn skewBg"  >Register</button>
         <div class="header-actions">
 
         
@@ -94,6 +97,7 @@
     </div>
 
   </header>
+
 <br>
 
 <br>
@@ -517,6 +521,31 @@
       });
     });
   </script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+  /* --- TABS SCRIPT --- */
+  const tabs = document.querySelectorAll('[data-tab-target]');
+  const tabContents = document.querySelectorAll('.tab-pane');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = document.querySelector(tab.dataset.tabTarget);
+
+      tabContents.forEach(tabContent => {
+        tabContent.classList.remove('active');
+      });
+      tabs.forEach(t => {
+        t.classList.remove('active');
+      });
+
+      tab.classList.add('active');
+      target.classList.add('active');
+    });
+  });
+</script>
 </body>
 
 </html>
